@@ -25,7 +25,7 @@ React JS
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+Clone repository and run node package manager
 
 ```
 git clone git@github.com:SakuraComputing/devconnector.git
