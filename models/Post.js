@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 // Create Schema
-const postSchema = new Schema({
+const PostSchema = new Schema({
    user: {
        type: Schema.Types.ObjectId,
        ref: 'users'
@@ -42,6 +42,10 @@ const postSchema = new Schema({
             avatar: {
                 type: String
             },
+            date: {
+                type: Date,
+                default: Date.now
+            }
         }
     ],
     date: {
@@ -49,4 +53,4 @@ const postSchema = new Schema({
         default: Date.now
     }
 });
-module.exports = Post = mongoose.model();
+module.exports = Post = mongoose.model('post', PostSchema);
