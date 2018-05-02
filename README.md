@@ -1,15 +1,26 @@
 # Developer Connector Social Application
 
-Built using Express, NodeJs, React JS
+Built using Express, NodeJs, React JS, Mongo DB
 
 ## Database
 
-MongoDB hosted by myLAB via AWS
+MongoDB hosted by myLab via AWS
+
+Ensure you have an account on mLab and a database named devconnector 
+
 Mongoose connector
 
 ## Getting Started
 
-nodemon server.js
+Create your node modules
+```aidl
+npm install
+```
+
+To run the server and the client concurrently run the following (this will open up your browser also)
+```aidl
+npm run dev 
+```
 
 ### Prerequisites
 
