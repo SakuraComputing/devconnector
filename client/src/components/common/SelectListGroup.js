@@ -17,14 +17,15 @@ const SelectListGroup = ({
     ));
     return (
         <div className="form-group">
-            <select>
+            <select
                 className={classnames('form-control from-control-lg', {
                     'is-invalid': error
                 })}
                 name={name}
                 value={value}
                 onChange={onChange}
-                {selectOptions}
+            >
+            {selectOptions}
             </select>
             {info && <small className="form-text text-muted">{info}</small>}
             {error && (<div className="invalid-feedback">{error}</div>)}
@@ -35,8 +36,8 @@ const SelectListGroup = ({
 SelectListGroup.propTypes = {
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    error: PropTypes.string,
     info: PropTypes.string,
+    error: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     options: PropTypes.array.isRequired
 };
