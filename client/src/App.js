@@ -16,6 +16,7 @@ import Landing from './components/layout/Landing';
 import Register from './components/auth/register';
 import Login from './components/auth/login';
 import Dashboard from './components/dashboard/dashboard';
+import CreateProfile from './components/create-profile/CreateProfile';
 
 import './App.css';
 
@@ -55,6 +56,10 @@ class App extends Component {
                       <Switch>
                         <PrivateRoute exact path="/dashboard" component={Dashboard}></PrivateRoute>
                       </Switch>
+                      <Switch>
+                          <PrivateRoute exact path="/create-profile" component={CreateProfile}></PrivateRoute>
+                      </Switch>
+
                   </div>
                   <Footer />
               </div>
