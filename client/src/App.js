@@ -38,7 +38,7 @@ if(localStorage.jwtToken) {
     const currentTime = Date.now() / 1000;
     if(decoded.exp < currentTime) {
         // Logout the user
-        store.dispatch(logoutUser);
+        store.dispatch(logoutUser());
         store.dispatch(clearCurrentProfile);
         // Redirect to login
         window.location.href = '/login';
