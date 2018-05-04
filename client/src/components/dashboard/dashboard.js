@@ -6,6 +6,7 @@ import { getCurrentProfile, deleteAccount } from "../../actions/profileActions";
 import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
 import Experience from './Experience';
+import Education from './Education';
 
 class Dashboard extends React.Component {
 
@@ -35,9 +36,10 @@ class Dashboard extends React.Component {
                         { user.name }</Link></p>
                         <ProfileActions />
                         <Experience experience={profile.experience}/>
+                        <Education education={profile.education}/>
 
                         <div style={{ marginBottom: '60px' }}/>
-                        <button onClick={() => {this.onDeleteClick}} className="btn btn-danger">Delete My Account</button>
+                        <button onClick={this.onDeleteClick} className="btn btn-danger">Delete My Account</button>
                     </div>
                 )
             } else {
