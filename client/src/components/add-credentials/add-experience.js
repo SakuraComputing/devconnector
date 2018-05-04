@@ -60,14 +60,14 @@ class AddExperience extends React.Component {
 
         return(
             <div className="add-experience">
-                <div className="conatiner">
+                <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">
                             <Link to="/dashboard" className="btn btn-light">
                                 Go Back
                             </Link>
                             <h1 className="display-4 text-center">Add Experience</h1>
-                            <p className="lead text-center">Add any job or position that you have had in the past or curreny</p>
+                            <p className="lead text-center">Add any job or position that you have had in the past or current</p>
                             <small className="d-block pb-3">* = required fields</small>
                             <form onSubmit={this.onSubmit} >
                             <TextFieldGroup
