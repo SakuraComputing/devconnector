@@ -52,6 +52,18 @@ export const deleteAccount = () => dispatch => {
     }
 };
 
+// Add Experience
+export const addExperience = (expData, history) => dispatch => {
+  axios
+    .post('/api/profile/experience', expData)
+    .then(res => history.push('/dashboard'))
+      .catch(err =>
+        dispatch({
+            type: GET_ERRORS,
+            payload: err.response.data
+        }))
+};
+
 // Profile Loading
 export const setProfileLoading = () => {
     return {
