@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import { deleteEducation } from '../../actions/profileActions';
 
+
 class Education extends React.Component {
 
     onDeleteClick = (id) => {
