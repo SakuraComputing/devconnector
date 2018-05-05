@@ -4,6 +4,8 @@ import Moment from 'react-moment';
 class ProfileCreds extends React.Component {
     render() {
 
+        const DATE_FORMAT = "DD-MMM-YYYY";
+
         const { education, experience } = this.props;
 
         // Experience
@@ -11,17 +13,17 @@ class ProfileCreds extends React.Component {
             <li key={exp._id} className="list-group-item">
                 <h4>{exp.company}</h4>
                 <p>
-                    <Moment format="DD/MM/YYYY">{exp.from}</Moment> -
-                    {exp.to === null ? ('Now') : (<Moment format="DD/MM/YYYY">{exp.to}</Moment>)}
+                    <Moment format={DATE_FORMAT}>{exp.from}</Moment> -
+                    {exp.to === null ? ('Now') : (<Moment format={DATE_FORMAT}>{exp.to}</Moment>)}
                 </p>
-                <p><strong>Position:</strong>
+                <p><strong>Position: </strong>
                     {exp.title}
                 </p>
                 <p>
-                    {exp.location === null ? null : (<span><strong>Location:</strong>{exp.location}</span>)}
+                    {exp.location === null ? null : (<span><strong>Location: </strong>{exp.location}</span>)}
                 </p>
                 <p>
-                    {exp.description === null ? null : (<span><strong>Description:</strong>{exp.description}</span>)}
+                    {exp.description === null ? null : (<span><strong>Description: </strong>{exp.description}</span>)}
                 </p>
             </li>
         ));
@@ -32,17 +34,17 @@ class ProfileCreds extends React.Component {
             <li key={edu._id} className="list-group-item">
                 <h4>{edu.school}</h4>
                 <p>
-                    <Moment format="DD/MM/YYYY">{edu.from}</Moment> -
-                    {edu.to === null ? ('Now') : (<Moment format="DD/MM/YYYY">{edu.to}</Moment>)}
+                    <Moment format={DATE_FORMAT}>{edu.from}</Moment> -
+                    {edu.to === null ? ('Now') : (<Moment format={DATE_FORMAT}>{edu.to}</Moment>)}
                 </p>
-                <p><strong>Degree:</strong>
+                <p><strong>Degree: </strong>
                     {edu.degree}
                 </p>
                 <p>
-                    <span><strong>Field Of Study:</strong>{edu.fieldofstudy}</span>
+                    <span><strong>Field Of Study: </strong>{edu.fieldofstudy}</span>
                 </p>
                 <p>
-                    {edu.description === null ? null : (<span><strong>Description:</strong>{edu.description}</span>)}
+                    {edu.description === null ? null : (<span><strong>Description: </strong>{edu.description}</span>)}
                 </p>
             </li>
         ));
