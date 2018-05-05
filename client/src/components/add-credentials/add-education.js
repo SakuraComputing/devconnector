@@ -29,6 +29,7 @@ class AddEducation extends React.Component {
     }
 
     onSubmit = (e) => {
+
         e.preventDefault();
 
         const eduData = {
@@ -69,7 +70,7 @@ class AddEducation extends React.Component {
                             <h1 className="display-4 text-center">Add Education</h1>
                             <p className="lead text-center">Add any school, bootcamp etc. that you have attended</p>
                             <small className="d-block pb-3">* = required fields</small>
-                            <form onSubmit={this.onSubmit} >
+                            <form onSubmit={this.onSubmit}>
                                 <TextFieldGroup
                                     placeholder="* School"
                                     name="school"

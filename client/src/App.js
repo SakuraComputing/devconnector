@@ -23,6 +23,7 @@ import AddEducation from './components/add-credentials/add-education';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 
+
 import './App.css';
 
 //Check for token
