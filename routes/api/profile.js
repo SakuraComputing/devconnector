@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 const passport = require('passport');
-
 
 // Load Validation
 const validateProfileInput = require('../../validation/profile');
@@ -203,6 +201,8 @@ router.post('/education', passport.authenticate('jwt', { session: false }), (req
         return res.status(400).json(errors);
     }
 
+    console.log("User", req.user.id);
+
     Profile.findOne({ user: req.user.id })
         .then(profile => {
             const newEdu = {
@@ -220,6 +220,7 @@ router.post('/education', passport.authenticate('jwt', { session: false }), (req
 
             profile.save().then(profile => res.json(profile));
         })
+        .catch(err => res.status(404).json(err));
 });
 
 // @route DELETE api/profile/experience/:exp_id
