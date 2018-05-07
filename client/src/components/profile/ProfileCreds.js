@@ -77,9 +77,4 @@ class ProfileCreds extends React.Component {
     }
 }
 
-// ProfileCreds.propTypes = {
-//   education: PropTypes.object,
-//
-// };
-
 export default ProfileCreds;

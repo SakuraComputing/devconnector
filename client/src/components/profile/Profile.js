@@ -44,6 +44,7 @@ class Profile extends React.Component {
                     <ProfileHeader profile={profile}/>
                     <ProfileAbout profile={profile}/>
                     <ProfileCreds education={profile.education} experience={profile.experience}/>
+                    {console.log("Github", profile.githubusername)}
                     {profile.githubusername ? (<ProfileGitHub username={profile.githubusername}/>) : null }
                 </div>
 
