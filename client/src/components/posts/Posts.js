@@ -40,7 +40,7 @@ class Posts extends React.Component {
 }
 
 Posts.propTypes = {
-    getPosts: PropTypes.object.isRequired,
+    getPosts: PropTypes.func.isRequired,
     post: PropTypes.object.isRequired
 };
 

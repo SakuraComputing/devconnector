@@ -200,9 +200,6 @@ router.post('/education', passport.authenticate('jwt', { session: false }), (req
     if(!isValid) {
         return res.status(400).json(errors);
     }
-
-    console.log("User", req.user.id);
-
     Profile.findOne({ user: req.user.id })
         .then(profile => {
             const newEdu = {
