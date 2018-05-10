@@ -73,7 +73,11 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This has been pushed to Heroku
+
+```aidl
+devconnector-app.herokuapp.com
+```
 
 ## Built With
 
