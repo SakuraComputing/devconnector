@@ -27,7 +27,6 @@ class PostItem extends React.Component {
         }
     }
 
-
     render() {
 
         const { post, auth, showActions } = this.props;
@@ -60,9 +59,11 @@ class PostItem extends React.Component {
                                 Comments
                             </Link>
                             {post.user === auth.user.id ? (
-                                <button onClick={this.onDeleteClick.bind(this, post._id)} type="button"
-                                        className="btn btn-danger mr-1">
-                                    <i className="fas fa-times"></i>
+                                <button onClick={this.onDeleteClick.bind(this, post._id)}
+                                        type="button"
+                                        className="btn btn-danger mr-1"
+                                >
+                                <i className="fas fa-times"></i>
                                 </button>
                             ) : null}
                         </span>) : null}
