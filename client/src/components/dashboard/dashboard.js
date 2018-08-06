@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -35,8 +35,11 @@ class Dashboard extends React.Component {
                         <p className="lead text-muted">Welcome <Link to={`/profile/${profile.handle}`}>
                         { user.name }</Link></p>
                         <ProfileActions />
-                        <Experience experience={profile.experience}/>
-                        <Education education={profile.education}/>
+                        <StrictMode>
+                            <Experience experience={profile.experience}/>
+                            <Education education={profile.education}/>
+
+                        </StrictMode>
 
                         <div style={{ marginBottom: '60px' }}/>
                         <button onClick={this.onDeleteClick} className="btn btn-danger">Delete My Account</button>
