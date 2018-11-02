@@ -3,5 +3,4 @@ node_modules/*
 .iml
 .log
 coverage/
-package-lock.json
 /config/keys_dev.js
